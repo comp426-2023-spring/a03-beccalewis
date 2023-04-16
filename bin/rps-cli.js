@@ -36,7 +36,7 @@ const length = args._.length
 const play = args._[0]
 switch (length) {
 case 0:
-	console.log(JSON.stringify(rpsls("null")));
+	console.log(JSON.stringify(rps("null")));
 	process.exit(0)
 case 1:
 	if (play == "rock" || play == "paper" || play == "scissors") {
