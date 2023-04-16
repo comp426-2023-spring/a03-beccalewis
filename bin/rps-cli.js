@@ -28,5 +28,29 @@ if(args.rules || args.r) {
   - Paper COVERS Rock
   - Rock CRUSHES Scissors`);
     process.exit(0);
+}
+
+
+
+const length = args._.length
+const play = args._[0]
+switch (length) {
+case 0:
+	console.log(JSON.stringify(rpsls("null")));
+	process.exit(0)
+case 1:
+	if (play == "rock" || play == "paper" || play == "scissors") {
+		console.log(JSON.stringify(rps(play)));
+		process.exit(0);
+} else {
+		console.log("You can't play that, bestie.");
+		console.log(`Rules for Rock Paper Scissors:
+
+  - Scissors CUTS Paper
+  - Paper COVERS Rock
+  - Rock CRUSHES Scissors`);
+    process.exit(0);
+
+}
 
 }

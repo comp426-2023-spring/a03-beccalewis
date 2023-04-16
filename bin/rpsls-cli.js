@@ -38,14 +38,12 @@ if(args.rules || args.r) {
 }
 
 const length = args._.length
-console.log(length)
 const play = args._[0]
 switch (length) {
 case 0:
 	console.log(JSON.stringify(rpsls("null")));
 	process.exit(0)
 case 1:
-	console.log(play)
 	if (play == "rock" || play == "paper" || play == "scissors" || play == "lizard" || play == "spock") {
 		console.log(JSON.stringify(rpsls(play)));
 		process.exit(0);
