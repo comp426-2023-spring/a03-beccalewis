@@ -38,7 +38,7 @@ if(args.rules || args.r) {
 }
 
 const length = args._.length
-const play = args._[0]
+const play = args._[0].toString().toLowerCase();
 switch (length) {
 case 0:
 	console.log(JSON.stringify(rpsls("null")));
@@ -48,7 +48,7 @@ case 1:
 		console.log(JSON.stringify(rpsls(play)));
 		process.exit(0);
 } else {
-		console.log("You can't play that, bestie.");
+		console.log("You can't play [play], bestie.");
 		console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
     - Scissors CUTS Paper
     - Paper COVERS Rock
