@@ -1,10 +1,18 @@
 #!/usr/bin/env node
-import { rpsls } from "../lib/rpsls"
+import { rpsls } from "../lib/rpsls.js"
 import minimist from "minimist"
 
 // this is what will run when i link/install the package and run node-rpsls
 
 const args = minimist(process.argv.slice(2));
+
+if (args._.length <= 2) {
+    console.log(JSON.stringify(rps()))
+} else if (args._.length > 3) {
+    console.error("ERROR: arguments out of range")
+} else {
+    console.log(JSON.stringify(rps(...args._.slice(2))))
+}
 
 if(args.help || args.h) {
 	console.log(`Usage: node-rpsls [SHOT]
