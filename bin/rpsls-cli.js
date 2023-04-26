@@ -46,7 +46,7 @@ if(args.rules || args.r) {
 }
 
 const length = args._.length
-const play = args._[0].toString().toLowerCase();
+const play = args._[0].toString();
 switch (length) {
 case 0:
 	console.log(JSON.stringify(rpsls("null")));
