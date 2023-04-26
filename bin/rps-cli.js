@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { rps } from "../lib/rpsls"
+import { rps } from "../lib/rpsls.js"
 import minimist from "minimist"
 
 //this is the file that runs when i link/install the package and run node-rps
